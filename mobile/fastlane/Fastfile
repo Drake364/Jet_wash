@@ -1,0 +1,13 @@
+default_platform(:android)
+
+platform :android do
+  desc "Build a debug APK"
+  lane :debug do
+    sh "flutter build apk --debug"
+  end
+
+  desc "Build a release AAB"
+  lane :release do
+    sh "flutter build appbundle --release"
+  end
+end
